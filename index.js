@@ -34,8 +34,8 @@ app.use((err, req, res) => {
 
 if (process.env.NODE_ENV !== "test") {
   // Launch the server
-  app.listen(process.env.PORT, () =>
-    console.log(`App listening at http://localhost:${process.env.PORT}`)
+  app.listen(process.env.PORT ?? 3000, () =>
+    console.log(`App listening at http://localhost:${process.env.PORT ?? 3000}`)
   );
 }
 
