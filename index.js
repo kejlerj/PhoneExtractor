@@ -3,10 +3,11 @@ const axios = require("axios");
 require("dotenv").config();
 
 const getPhoneNumber = async (company, address, siren) => {
+  const googleSearch ="https://www.google.com/search?q=";
   const re = /(?:(?:\+|00)33|\(\+33\)|0)\s*[1-9](?:\s*\d{2}){4}/m;
 
   return await axios
-    .get(`${process.env.GOOGLE_SEARCH} ${company} ${address} ${siren}`)
+    .get(`${googleSearch} ${company} ${address} ${siren}`)
     .then((res) => {
       const phone = res.data.match(re);
       return phone?.length ? phone[0] : undefined;
