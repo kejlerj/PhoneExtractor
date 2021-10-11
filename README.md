@@ -1,5 +1,4 @@
-# PhoneExtractor
-A NodeJS app that extract a company phone number from internet.
+![PhoneExtractor](https://socialify.git.ci/kejlerj/PhoneExtractor/image?language=1&owner=1&stargazers=1&theme=Light)
 
 ## 🚀 Features
 - Find phone number from company name.
